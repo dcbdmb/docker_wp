@@ -7,8 +7,9 @@ https://docs.docker.com/engine/reference/commandline/docker/#child-commands
 FROM wordpress:php7.1-apache
 
 > docker buid -t 'wp_image' .
-> docker run --name mysql-cont -e MYSQL_ROOT_PASSWORD=sqerty -d mysql:5.7
+> docker run --name mysql-cont -e MYSQL_ROOT_PASSWORD=qwerty -d mysql:5.7
 > docker run --name wp-cont --link mysql-cont:mysql -p 8000:80 -d wp-image
+> all in 1 command: docker run --name wp-cont -e WORDPRESS_DB_HOST=host:port -e WORDPRESS_DB_USER=user -e WORDPRESS_DB_PASSWORD=pass -p 8000:80 -d wp-image
 > docker stop wp-cont
 > docker stop mysql-cont
 > docker start wp-cont
