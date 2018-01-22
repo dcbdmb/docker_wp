@@ -14,6 +14,8 @@ FROM wordpress:php7.1-apache
 > docker stop mysql-cont
 > docker start wp-cont
 > docker start mysql-cont
+> docker restart wp-cont
+> docker restart mysql-cont
 
 ###See the results###
 in browser type: http://127.0.0.1:8000
@@ -84,3 +86,6 @@ volumes:
   my-datavolume:
 
 > docker-compose up -d
+
+## Next Step
+https://buddy.works/guides/how-run-wordpress-on-kubernetes?utm_source=newsletter&utm_medium=email&utm_campaign=ns_4417
