@@ -32,7 +32,7 @@ in browser type: http://127.0.0.1:8000
 
 ## Using docker compose
 > vi docker-compose.yml
-
+```
 version: '3'
 services:
   wp:
@@ -45,6 +45,7 @@ services:
     image: "mysql:5.7"
     environment:
       MYSQL_ROOT_PASSWORD: qwerty
+```
 
 > docker-compose up -d
 
