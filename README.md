@@ -56,6 +56,7 @@ services:
 
 > docker-compose up -d --build
 
+```
 #To persist data:
 version: '3'
 services:
@@ -73,6 +74,7 @@ services:
       - my-datavolume:/var/lib/mysql
 volumes:
   my-datavolume:
+```
 
 ###To push your own docker images:###
 1. Sign up on docker hub
@@ -80,6 +82,7 @@ volumes:
 3. > docker push my-docker-username/my-image
 
 update docker-compose to:
+```
 version: '3'
 services:
   wp:
@@ -96,6 +99,7 @@ services:
       - "my-datavolume:/var/lib/mysql"
 volumes: 
   my-datavolume:
+```
 
 > docker-compose up -d
 
